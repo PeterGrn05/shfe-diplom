@@ -14,7 +14,7 @@ a:visited {
 }
 
 button, input, textarea, select {
-	font-family: inherit;
+	font-family: 'Roboto', Arial, sans-serif;
 }
 
 .visually-hidden {
@@ -28,6 +28,7 @@ button, input, textarea, select {
 	overflow: hidden;
 }
 
+/* фон */
 .body-bg {
 	background-image: url(../img/userbg.png);
 	background-color: #000000;
@@ -46,3 +47,152 @@ button, input, textarea, select {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 } 
+
+.admin-body-bg::after {
+
+	content: "";
+ 	background-color: #000000;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+}
+
+/* Основные стили главной страницы */
+.content-wrapper {
+	padding: 0 18.5%;
+}
+
+.header {
+	box-sizing: border-box;
+	max-width: 990px;
+	padding: 14px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-logo {
+	margin: 0;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 34px;
+	color: #FFFFFF;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.header-logo-thin {
+	font-weight: 100;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.button {
+	border-radius: 3px;
+	border: none;
+	background: #16A6AF;
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24);
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	background: #1BBCC6;
+	cursor: pointer;
+}
+
+.button:active {
+	background: #16A6AF;
+}
+
+.header-button {
+	padding: 12px;
+}
+
+.header-button-hidden {
+	display: none;
+}
+
+
+/* основные свойства для админской */
+
+.content-wrapper-admin {
+	position: relative;
+	z-index: 2;
+	padding: 0 20.3%;
+}
+
+.admin-header {
+	padding: 35px 99px;
+}
+
+.admin-header-subtitle {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 5px;
+	color: #FFFFFF;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.login-wrapper {
+	max-width: 480px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	background-color: rgba(234, 233, 235, 0.95);
+}
+
+.login-header {
+	padding: 16px 0;
+
+	background-color: #63536C;
+}
+
+.login-title {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px 104px;
+}
+
+.login-label {
+	font-size: 12px;
+	font-weight: 400;
+	color: #848484;
+	align-self: flex-start;
+}
+
+.login-input {
+	width: 100%;
+	padding: 7px 9px 9px 9px;
+	box-sizing: border-box;
+	margin-bottom: 7px;
+
+	border-radius: 0;
+	border: 1px solid #B7B7B7;
+
+	font-size: 16px;
+	font-weight: 400;
+	color: #757575;
+}
+
+.login-button {
+	padding: 11px 35px 12px 36px;
+}

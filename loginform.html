@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Логин</title>
+	<link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="admin-body-bg">
+        <div class="content-wrapper-admin">
+		<header class="admin-header">
+			<div class="admin-header-logo">
+				<h1 class="header-logo">Идём<span class="header-logo-thin">в</span>кино</h1>
+				<h2 class="admin-header-subtitle">Администраторррская</h2>
+			</div>
+		</header>
+        <div class="login-wrapper">
+            <header class="login-header">
+				<h3 class="login-title">Авторизация</h3>
+			</header>
+			<form id="login" class="login-form">
+				<label for="email" class="email-label login-label">E-mail</label>
+				<input type="email" class="email-input login-input" id="email" name="login" placeholder="example@domain.xyz">
+				<label for="password" class="password-label login-label">Пароль</label>
+				<input type="password" class="password-input login-input" id="password" name="password">
+				<button class="login-button button" id="signin" type="submit">Авторизоваться</button>
+			</form>
+        </div>
+        </div>
+		<script defer src="src/login.js"></script>
+    </body>
+</html>
