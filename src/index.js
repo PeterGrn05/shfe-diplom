@@ -68,11 +68,11 @@ async function drawFilms() {
 			card.classList.add('hidden');
 		}
 
-		renderSessions(film, sessionArr);
+		renderSessions(film, sessionArr, pickedDate);
 	});
 }
 
-function renderSessions(filmObj, sessionArr) {
+function renderSessions(filmObj, sessionArr, pickedDate) {
 	const cards = [...document.querySelectorAll('.movie')];
 
 	sessionArr.forEach((sess) => {
@@ -84,7 +84,7 @@ function renderSessions(filmObj, sessionArr) {
 			const timeLi = document.createElement('li');
 			timeLi.classList.add('movie-halls-time');
 
-			if (chosenDate === todayDateString) {
+			if (pickedDate === currentDayString) {
 				const now = new Date();
 				const nowStr = `${now.getHours()}${now.getMinutes()}`;
 				if (nowStr > sess.seance_time.replace(':', '')) {
