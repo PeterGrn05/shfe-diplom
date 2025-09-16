@@ -101,8 +101,8 @@ function renderSessions(filmObj, sessionArr, pickedDate) {
 					window.localStorage.setItem('seanceHallId', sess.seance_hallid);
 					window.localStorage.setItem('seanceTime', sess.seance_time);
 					window.localStorage.setItem('filmTitle', filmObj.film_name);
-					window.localStorage.setItem('chosenDate', chosenDate);
-					window.location.assign('loginform.html', '_self')
+					window.localStorage.setItem('pickedDate', pickedDate);
+					window.location.assign('booking.html', '_self')
 				});
 			}
 
