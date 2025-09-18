@@ -278,7 +278,7 @@ button, input, textarea, select {
 .movie-halls-time {
 	padding: 7px;
 	border-radius: 2px;
-
+	font-family: 'Roboto', Arial, sans-serif;
 	color: #000000;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
@@ -299,7 +299,144 @@ button, input, textarea, select {
 	cursor: not-allowed;
 }
 
-/* основные свойства для админской */
+/* страница для бронировки мест */
+
+.client-hall-wrapper {
+	max-width: 990px;
+	margin: 0 auto;
+
+	background-color: rgba(241, 235, 230, 0.95);
+	border-radius: 2px;
+}
+
+.session-info {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+
+	padding: 15px;
+}
+
+.zoomed-hand {
+	display: none;
+}
+
+.session-title {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.session-time {
+	font-size: 14px;
+	font-weight: 300;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.session-hall {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.hall {
+	padding-top: 45px;
+	padding-bottom: 13px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	background-color: rgba(23, 29, 36, 1);
+	background-image: url(../img/screen.png);
+	background-position: top 15px center;
+	background-repeat: no-repeat;
+	background-size: 284px auto;
+}
+
+.hall-grid {
+	margin: 0 auto;
+	display: grid;
+	gap: 4px;
+}
+
+.hall-seat {
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+}
+
+.seat-free {
+	border: 1px solid #525252;
+	background-color: #FFFFFF;
+}
+
+.hall-grid .seat-free:hover {
+	transform: scale(1.2);
+}
+
+.seat-occupied {
+	border: 1px solid #525252;
+}
+
+.seat-vip {
+	border: 1px solid #525252;
+	background-color: #F9953A;
+}
+
+.hall-grid .seat-vip:hover {
+	transform: scale(1.2);
+}
+
+.hall-seat-chosen {
+	transform: scale(1.2);
+	border: 1px solid #525252;
+	background-color: #25C4CE;
+	box-shadow: 0px 0px 4px 0px #16A6AF;
+}
+
+.hall-legend {
+	width: 284px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+}
+
+.legend-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.legend-item {
+	display: flex;
+	gap: 4px;
+}
+
+.legend-label {
+	font-size: 14px;
+	font-weight: 300;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #FFFFFF;
+}
+
+.booking {
+	padding: 30px 0;
+}
+
+.booking-button {
+	display: block;
+	margin: 0 auto;
+	padding: 11px 61px 13px 61px;
+}
+
+/* основные свойства для входа в админскую */
 
 .content-wrapper-admin {
 	position: relative;
@@ -374,4 +511,37 @@ button, input, textarea, select {
 
 .login-button {
 	padding: 11px 35px 12px 36px;
+}
+
+
+/* виды для разных сайтов */
+
+@media (max-width:990px) {
+	.content-wrapper {
+		padding: 0;
+	}
+
+	.session-info-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.zoomed-hand {
+		display: flex;
+		padding: 15px;
+		align-items: center;
+	}
+
+	.hint-text {
+		width: 67px;
+		font-family: 'Roboto', Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	.hint-icon {
+		width: 24px;
+		height: 32px;
+	}
 }

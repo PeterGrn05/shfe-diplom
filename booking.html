@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-bg">
+    <div class="content-wrapper">
+        <header class="header">
+            <h1 class="header-logo">Идём<span class="header-logo-thin">в</span>кино</h1>
+        </header>
+        <main class="client-hall-wrapper">
+            <div class="session-info-wrapper">
+                <div class="session-info"></div>
+                <div class="zoomed-hand">
+					<img src="./img/hint.png" alt="" class="hint-icon">
+					<p class="hint-text">Тапните дважды, чтобы увеличить</p>					
+				</div>
+            </div>
+            <section class="hall">
+                <div class="hall-grid"></div>
+
+                <!-- Легенда -->
+                <div class="hall-legend">
+                    <div class="legend-wrapper">
+                        <div class="legend-item">
+                            <span class="hall-seat seat-free"></span>
+                            <span id="legend-standard" class="legend-label"></span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="hall-seat seat-vip"></span>
+                            <span id="legend-vip" class="legend-label"></span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="hall-seat seat-occupied"></span>
+                            <span class="legend-label">Занято</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="hall-seat hall-seat-chosen"></span>
+                            <span class="legend-label">Выбрано</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="booking">
+                <button class="booking-button button">Забронировать</button>
+            </div>
+        </main>
+    </div>
+    <script defer src="src/xhr.js"></script>
+    <script defer src="src/bookingseats.js"></script>
+</body>
+
+</html>
