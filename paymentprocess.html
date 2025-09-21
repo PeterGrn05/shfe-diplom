@@ -12,11 +12,23 @@
     <div class="content-wrapper">
         <header class="header">
             <h1 class="header-logo">Идём<span class="header-logo-thin">в</span>кино</h1>
-
-        <main class="client-index">
-        </main>
+        </header>
+            <main class="payment">
+                <div class="payment-header">
+                    <h2 class="payment-title">Вы выбрали билеты:</h2>
+                </div>
+                <div class="ticket-info">
+                    <button class="ticket-button button">Получить код бронирования</button>
+                    <div class="ticket-qr"></div>
+                    <p class="ticket-hint">После оплаты билет будет доступен в этом окне, а также придёт вам на почту.
+                        Покажите QR-код нашему контроллёру у входа в зал.</p>
+                    <p class="ticket-hint">Приятного просмотра!</p>
+                </div>
+            </main>
     </div>
     <script defer src="src/xhr.js"></script>
+    <script defer src="src/paymentprocess.js"></script>
+    <script defer src="src/QRCreator.js"></script>
 </body>
 
 </html>

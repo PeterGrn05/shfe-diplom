@@ -436,6 +436,114 @@ button, input, textarea, select {
 	padding: 11px 61px 13px 61px;
 }
 
+
+/* страница оплаты */
+
+.payment{
+	max-width: 990px;
+	margin: 0 auto;
+}
+
+.payment-header {
+	position: relative;
+ 	padding: 25px 15px;
+	box-sizing: border-box;
+	background-color: rgba(241, 235, 230, 0.95);
+}
+.payment-header::after{
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	height: 3px;
+
+	background-image: url(../img/bottomticketseam.png);
+}
+.payment-header::before{
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	height: 3px;
+
+	background-image: url(../img/topticketseam.png);
+}
+
+.payment-title {
+	text-transform: uppercase;
+
+	font-size: 22px;
+	font-weight: 700;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #C76F00;
+}
+
+.ticket-info {
+	position: relative;
+
+	padding: 20px 15px 30px 15px;
+	margin-top: 6px;
+
+	background-color: rgba(241, 235, 230, 0.95);
+}
+.ticket-info::after{
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	height: 3px;
+	
+	background-image: url(../img/bottomticketseam.png);
+}
+.ticket-info::before{
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	height: 3px;
+
+	background-image: url(../img/topticketseam.png);
+}
+
+
+.ticket-button {
+	margin: 30px auto ;
+
+	background-color: #16A6AF;
+	box-shadow: 0px 3px 3px 0px #0000003D;
+}
+.ticket-button:hover{
+	background-color: #277c82;
+
+}
+
+.ticket-hint{
+	font-size: 14px;
+	font-weight: 300;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+.ticket-info-hint:nth-last-of-type(n+2) {
+	margin-bottom: 10px;
+}
+
+.ticket-qr{
+	display: flex;
+	justify-content: center;
+	margin: 30px auto;
+}
+
 /* основные свойства для входа в админскую */
 
 .content-wrapper-admin {
