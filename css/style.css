@@ -622,6 +622,177 @@ button, input, textarea, select {
 }
 
 
+/* Админская страница */
+
+.manage {
+	margin: auto;
+	max-width: 962px;
+}
+
+.section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #63536C;
+	font-family: 'Roboto', Arial, sans-serif;
+	max-height: 95px;
+}
+.section-header::before {
+	content: '';
+	box-sizing: border-box;
+	width: 44px;
+	height: 44px;
+	border: 4px solid #BC95D6;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 26px 20px 25px 40px;
+	z-index: 2;
+}
+.section-header::after {
+	content: '';
+	position: absolute;
+	align-self: flex-end;
+	background-color: #BC95D6;
+	height: 48px;
+	width: 2px;
+	margin-left: 61px;
+	z-index: 1;
+}
+
+.section-title {
+	text-transform: uppercase;
+	margin-right: auto;
+	font-size: 22px;
+	font-weight: 700;
+	color: white;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+.section-header-button {
+	margin-right: 40px;
+	width: 24px;
+	height: 16px;
+	border: none;
+	background-color: #63536C;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../img/arrowdown.png);
+}
+
+.section-text {
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.manage-content {
+	position: relative;
+	background-color: rgba(234, 233, 235, 0.95);
+	color: #000000;
+	padding-left: 104px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.manage-content::before {
+	content: '';
+	position: absolute;
+	background-color: #BC95D6;
+	height: 100%;
+	width: 2px;
+	left: 61px;
+	top: 0;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;               
+}
+
+.admin-button {
+	margin: 0;
+	text-align: center;
+	background-color: #16A6AF;
+	color: #fff;
+	padding: 11px 32px;
+	border: none;
+	cursor: pointer;
+}
+
+.admin-button:hover {
+	background-color: #277c82;
+}
+
+.admin-white-button {
+	margin: 0;
+	text-align: center;
+	padding: 11px 32px;
+	background-color: #FFFFFF;
+	color: #63536C;
+	border: none;
+	cursor: pointer;
+}
+
+.white-button:hover {
+	background-color: #63536C;
+	color: #FFFFFF;
+}
+
+/* админская страница - конфигурация залов */
+
+.admin-halls-list {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 14px 11px;
+
+	font-size: 16px;
+	font-weight: 500;
+	
+	text-transform: uppercase;
+}
+
+.admin-halls-list-item {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
+.admin-halls-list-item::before {
+	content: '–';
+}
+.admin-halls-button {
+	margin: auto;
+	text-align: center;
+	background-color: #16A6AF;
+	color: #fff;
+	padding: 11px 32px;
+	border: none;
+	cursor: pointer;
+}
+
+.admin-halls-button:hover {
+	background-color: #277c82;
+}
+
+.admin-text {
+	margin: 20px auto;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+.select-sales {
+	margin-top: 29px;
+}
+
+.sales-text {
+	margin: 29px auto;
+	text-align: center;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+
 /* виды для разных сайтов */
 
 @media (max-width:990px) {

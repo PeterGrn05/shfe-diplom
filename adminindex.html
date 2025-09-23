@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
+
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Панель Админа</title>
 	<link rel="stylesheet" href="css/style.css">
-    </head>
+</head>
 
-    <body class="admin-body-bg">
-        <div class="content-wrapper-admin">
+<body class="admin-body-bg">
+	<div class="content-wrapper-admin">
 		<header class="admin-header">
 			<div class="admin-header-logo">
 				<h1 class="header-logo">Идём<span class="header-logo-thin">в</span>кино</h1>
 				<h2 class="admin-header-subtitle">Администраторррская</h2>
 			</div>
 		</header>
-        </div>
-    </body>
+		<main class="manage">
+			<section>
+				<header class="section-header">
+					<h2 class="section-title">Управление залами</h2>
+					<button class="section-header-button"></button>
+				</header>
+				<div class="manage-content">
+					<div class="admin-halls-wrapper">
+						<p class="admin-text">Доступные залы:</p>
+						<button class="admin-halls-button button">Создать зал</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<header class="section-header">
+					<h2 class="section-title">Конфигурация залов</h2>
+					<button class="section-header-button"></button>
+				</header>
+				<div class="manage-content">
+					<p class="admin-text">Выберите зал для конфигурации:</p>
+					<p class="admin-text">Укажите количество рядов и максимальное количество кресел в ряду:</p>
+					<p class="admin-text">Теперь вы можете указать типы кресел на схеме зала:</p>
+					<div class="admin-buttons">
+						<button class="button admin-white-button">Отменить</button>
+						<button class="button admin-button">Сохранить</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<header class="section-header">
+					<h2 class="section-title">Конфигурация цен</h2>
+					<button class="section-header-button"></button>
+				</header>
+				<div class="manage-content">
+					<p class="admin-text">Выберите зал для конфигурации:</p>
+					<p class="admin-text">Установите цены для типов кресел:</p>
+					<div class="admin-buttons">
+						<button class="button admin-white-button">Отменить</button>
+						<button class="button admin-button">Сохранить</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<header class="section-header">
+					<h2 class="section-title">Сетка сеансов</h2>
+					<button class="section-header-button"></button>
+				</header>
+				<div class="manage-content">
+					<button class="button admin-button">Добавить Фильм</button>
+					<div class="admin-buttons">
+						<button class="button admin-white-button">Отменить</button>
+						<button class="button admin-button">Сохранить</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<header class="section-header">
+					<h2 class="section-title">Открыть продажи</h2>
+					<button class="section-header-button"></button>
+				</header>
+				<div class="manage-content">
+					<div class="select-sales">
+						<p class="admin-text">Выберите зал для открытия/закрытия продаж:</p>
+					</div>
+					<p class="sales-text">Всё готово к открытию</p>
+					<div class="admin-buttons">
+						<button class="button admin-button">Открыть продажу билетов</button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script defer src="src/xhr.js"></script>
+</body>
+
 </html>
