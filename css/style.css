@@ -13,7 +13,15 @@ a:visited {
 	color: inherit;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+span
+select {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+p {
 	font-family: 'Roboto', Arial, sans-serif;
 }
 
@@ -28,6 +36,10 @@ button, input, textarea, select {
 	overflow: hidden;
 }
 
+.hidden {
+	display: none;
+}
+
 /* фон */
 .body-bg {
 	background-image: url(../img/userbg.png);
@@ -36,7 +48,7 @@ button, input, textarea, select {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-} 
+}
 
 
 .admin-body-bg {
@@ -46,12 +58,12 @@ button, input, textarea, select {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-} 
+}
 
 .admin-body-bg::after {
 
 	content: "";
- 	background-color: #000000;
+	background-color: #000000;
 	opacity: 0.5;
 	position: fixed;
 	top: 0;
@@ -439,18 +451,19 @@ button, input, textarea, select {
 
 /* страница оплаты */
 
-.payment{
+.payment {
 	max-width: 990px;
 	margin: 0 auto;
 }
 
 .payment-header {
 	position: relative;
- 	padding: 25px 15px;
+	padding: 25px 15px;
 	box-sizing: border-box;
 	background-color: rgba(241, 235, 230, 0.95);
 }
-.payment-header::after{
+
+.payment-header::after {
 	content: '';
 	position: absolute;
 	bottom: -3px;
@@ -462,7 +475,8 @@ button, input, textarea, select {
 
 	background-image: url(../img/bottomticketseam.png);
 }
-.payment-header::before{
+
+.payment-header::before {
 	content: '';
 	position: absolute;
 	top: -3px;
@@ -492,7 +506,8 @@ button, input, textarea, select {
 
 	background-color: rgba(241, 235, 230, 0.95);
 }
-.ticket-info::after{
+
+.ticket-info::after {
 	content: '';
 	position: absolute;
 	bottom: -3px;
@@ -501,10 +516,11 @@ button, input, textarea, select {
 
 	display: block;
 	height: 3px;
-	
+
 	background-image: url(../img/bottomticketseam.png);
 }
-.ticket-info::before{
+
+.ticket-info::before {
 	content: '';
 	position: absolute;
 	top: -3px;
@@ -519,26 +535,28 @@ button, input, textarea, select {
 
 
 .ticket-button {
-	margin: 30px auto ;
+	margin: 30px auto;
 
 	background-color: #16A6AF;
 	box-shadow: 0px 3px 3px 0px #0000003D;
 }
-.ticket-button:hover{
+
+.ticket-button:hover {
 	background-color: #277c82;
 
 }
 
-.ticket-hint{
+.ticket-hint {
 	font-size: 14px;
 	font-weight: 300;
 	font-family: 'Roboto', Arial, sans-serif;
 }
+
 .ticket-info-hint:nth-last-of-type(n+2) {
 	margin-bottom: 10px;
 }
 
-.ticket-qr{
+.ticket-qr {
 	display: flex;
 	justify-content: center;
 	margin: 30px auto;
@@ -637,6 +655,7 @@ button, input, textarea, select {
 	font-family: 'Roboto', Arial, sans-serif;
 	max-height: 95px;
 }
+
 .section-header::before {
 	content: '';
 	box-sizing: border-box;
@@ -648,6 +667,7 @@ button, input, textarea, select {
 	margin: 26px 20px 25px 40px;
 	z-index: 2;
 }
+
 .section-header::after {
 	content: '';
 	position: absolute;
@@ -667,6 +687,7 @@ button, input, textarea, select {
 	color: white;
 	font-family: 'Roboto', Arial, sans-serif;
 }
+
 .section-header-button {
 	margin-right: 40px;
 	width: 24px;
@@ -692,6 +713,7 @@ button, input, textarea, select {
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
+
 .manage-content::before {
 	content: '';
 	position: absolute;
@@ -703,9 +725,9 @@ button, input, textarea, select {
 }
 
 .admin-buttons {
-  display: flex;
-  justify-content: center; 
-  gap: 20px;               
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 
 .admin-button {
@@ -737,8 +759,6 @@ button, input, textarea, select {
 	color: #FFFFFF;
 }
 
-/* админская страница - конфигурация залов */
-
 .admin-halls-list {
 	list-style-type: none;
 	display: flex;
@@ -748,7 +768,7 @@ button, input, textarea, select {
 
 	font-size: 16px;
 	font-weight: 500;
-	
+
 	text-transform: uppercase;
 }
 
@@ -761,6 +781,7 @@ button, input, textarea, select {
 .admin-halls-list-item::before {
 	content: '–';
 }
+
 .admin-halls-button {
 	margin: auto;
 	text-align: center;
@@ -781,6 +802,358 @@ button, input, textarea, select {
 }
 
 
+.admin-delete-button {
+	width: 20px;
+	height: 20px;
+
+	border: none;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	background-image: url(../img/cancel.png);
+	background-size: 24px 12px;
+	background-position: top 4px left 5px;
+	background-repeat: no-repeat;
+
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24);
+}
+
+.admin-delete-button:hover {
+	background-color: #63536C;
+	background-position: top 4px right 5px;
+	cursor: pointer;
+}
+
+.admin-delete-button-halls {
+	height: 20px;
+	width: 20px;
+	background-image: url(../img/remove.png);
+	background-size: contain;
+	border: none;
+	left: -25px;
+	top: 40px;
+}
+
+.input-container {
+	margin-top: 11px;
+	display: flex;
+	gap: 14px;
+	align-items: center;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: row; 
+	align-items: center; 
+	gap: 8px;
+}
+
+.admin-label {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #848484;
+}
+
+.admin-input {
+	padding: 7px;
+	width: 100px;
+	box-sizing: border-box;
+	border: 1px solid #B7B7B7;
+	border-radius: 0;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.hall-switch-buttons {
+	display: flex;
+	margin-top: 12px;
+}
+
+.hall-switch-button {
+	padding: 12px 21px 13px 21px;
+	border: none;
+	border-radius: 3px;
+	align-self: center;
+
+	background-color: rgba(255, 255, 255, 0.45);
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24);
+
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.hall-switch-button:hover {
+	background-color: #FFFFFF;
+	cursor: pointer;	
+}
+
+.hall-switch-button-active {
+	scale: 107%;
+
+	background-color: #FFFFFF;
+
+	font-size: 15px;
+	font-weight: 900;
+}
+
+
+.seat-scheme-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 11px 23px;
+	margin: 11px 0;
+}
+
+.legend-text {
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #848484;
+	align-self: center;
+}
+
+.seat-multiplier {
+	padding-top: 10px;
+	font-size: 20px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+
+}
+
+.seat-scheme-grid-wrapper {
+	position: relative;
+	padding: 64px 0 36px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #000000;
+	max-width: 90%;
+}
+
+.seat-scheme-grid-wrapper::before {
+	content: 'экран';
+	position: absolute;
+	top: 26px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 19px;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.seat-scheme-grid {
+	margin: 0 auto;
+	display: grid;
+	gap: 10px;
+}
+
+.seat-scheme-item {
+	width: 26px;
+	height: 26px;
+	border-radius: 4px;
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+}
+
+.seat-scheme-grid>.seat-scheme-item:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.seat-scheme-item-regular {
+	background-color: #C4C4C4;
+	border-color: #393939;
+}
+
+.seat-scheme-item-vip {
+	background-image: repeating-linear-gradient(135deg, #b0d6d8 1px, #0a828a 2px);
+	border-color: #0A828A;
+}
+
+
+
+.admin-sessions-movie-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 12px;
+	margin-bottom: 51px;
+
+	list-style-type: none;
+}
+
+.admin-sessions-movie-list-item {
+	display: flex;
+	gap: 10px;
+
+	width: 255px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+
+	cursor: pointer;
+
+	position: relative;
+}
+
+.admin-sessions-movie-list-item:nth-child(5n+1) {
+	background-color: #CAFF85;
+}
+
+.admin-sessions-movie-list-item:nth-child(5n+2) {
+	background-color: #85FF89;
+}
+
+.admin-sessions-movie-list-item:nth-child(5n+3) {
+	background-color: #85FFD3;
+}
+
+.admin-sessions-movie-list-item:nth-child(5n+4) {
+	background-color: #85E2FF;
+}
+
+.admin-sessions-movie-list-item:nth-child(5n+5) {
+	background-color: #8599FF;
+}
+
+.admin-sessions-movie-image {
+	width: 38px;
+	height: 52px;
+}
+
+.admin-sessions-movie-info {
+	font-size: 14px;
+	color: #000000;
+}
+
+.admin-sessions-movie-title {
+	font-weight: 500;
+}
+
+.admin-sessions-movie-length {
+	font-weight: 400;
+	opacity: 0.7;
+}
+
+.admin-sessions-movie-image {
+	width: 38px;
+	height: 52px;
+}
+
+.admin-sessions-movie-info {
+	font-size: 14px;
+	color: #000000;
+}
+
+.admin-sessions-movie-title {
+	font-weight: 500;
+}
+
+.admin-sessions-movie-length {
+	font-weight: 400;
+	opacity: 0.7;
+}
+
+.admin-delete-button-sessions {
+	position: absolute;
+	background-image: url(/img/remove.png);
+	background-size: contain;
+	bottom: 1px;
+	right: 1px;
+}
+
+.admin-sessions-halls-list {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+
+	margin-bottom: 31px;
+
+	list-style-type: none;
+}
+
+.admin-sessions-halls-list-item {
+	position: relative;
+}
+
+.admin-sessions-halls-title {
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.admin-sessions-halls-timeline {
+	border: 1px solid #848484;
+	height: 60px;
+	box-sizing: border-box;
+	width: 90%;
+
+	display: flex;
+	flex-direction: row;
+
+	padding: 10px 0;
+
+	position: relative;
+}
+
+.admin-sessions-session-wrapper {
+	height: 35px;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	position: absolute;
+	box-sizing: border-box;
+	width: 90px;
+
+	cursor: pointer;
+}
+
+.admin-sessions-session {
+	overflow: hidden;
+	height: 100%;
+	white-space: nowrap;
+}
+
+.admin-sessions-session-delete {
+	height: 20px;
+	width: 20px;
+	background-image: url(/img/remove.png);
+	background-size: contain;
+	position: absolute;
+
+	left: -25px;
+	top: 40px;
+}
+
+.admin-sessions-session-title {
+	font-size: 10px;
+	font-weight: 400;
+}
+
+.admin-sessions-session-time {
+	font-size: 12px;
+	font-weight: 400;
+	color: #848484;
+
+	position: absolute;
+
+	bottom: -35px;
+	left: -15px;
+}
+
+.admin-sessions-session-time::before {
+	content: '';
+
+	height: 5px;
+	width: 1px;
+	background-color: #848484;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
 .select-sales {
 	margin-top: 29px;
 }
@@ -791,6 +1164,116 @@ button, input, textarea, select {
 	font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* попап */
+
+.popup-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 3;
+
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+	width: 960px;
+	position: relative;
+	z-index: 500;
+	background-color: rgba(234, 233, 235, 0.95);
+}
+
+.popup-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 42px;
+
+	background-color: #63536C;
+}
+
+.popup-title {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 700;
+	color: #FFFFFF;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.popup-close {
+	border: none;
+	border-radius: 0;
+	width: 22px;
+	height: 22px;
+
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(../img/cancel.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.popup-close:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.popup-form {
+	display: flex;
+	flex-direction: column;
+
+	padding: 35px 105px;
+}
+
+.popup-label {
+	margin-top: 8px;
+
+	font-size: 12px;
+	font-weight: 400;
+	color: #848484;
+}
+
+.popup-input {
+	padding: 7px 8px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #B7B7B7;
+	border-radius: 0;
+
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.popup-input-description {
+	height: 80px;
+	resize: none;
+}
+
+.popup-input-select {
+	text-transform: uppercase;
+
+	appearance: none;
+	-webkit-appearance: none;
+
+	background-image: url(/img/select.png);
+	background-repeat: no-repeat;
+	background-size: 12px 7px;
+	background-position: center right 12px;
+}
+
+.submit-wrapper-popup {
+	margin-top: 42px;
+}
+
+.submit-poster-button {
+	display: none;
+}
 
 
 /* виды для разных сайтов */

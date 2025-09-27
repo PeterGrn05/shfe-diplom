@@ -42,7 +42,7 @@ class allData {
 		    .then( (response) => response.json())
 		    .then( (data) => {
 		    	hallName.value = '';
-		    	addHallPopup.classList.add('hidden');
+		    	addHallPopup.classList.add('visually-hidden');
 		    	this.info.halls = data.result.halls;
 
 		    	renderHallsList(data.result.halls);
@@ -84,7 +84,7 @@ class allData {
 			.then( response => response.json())
 		    .then( data => {
 		    	console.log( data );
-		    	this.info.halls.find(x => x.id == data.result.id).hall_price_standart = data.result.hall_price_standart;
+		    	this.info.halls.find(x => x.id == data.result.id).hall_price_standard = data.result.hall_price_standard;
 		    	this.info.halls.find(x => x.id == data.result.id).hall_price_vip = data.result.hall_price_vip;
 		    })
 	}
@@ -105,7 +105,7 @@ class allData {
 				filmCountryInput.value = '';
 				uploadPosterButton.value = '';
 
-		    	addFilmPopup.classList.toggle('hidden');
+		    	addFilmPopup.classList.toggle('visually-hidden');
 
 		    	this.info.films = data.result.films;
 		    	filmItems = this.info.films;
@@ -142,7 +142,7 @@ class allData {
 		    	if (data.success) {
 
 			    	timeInput.value = '10:00';
-			    	addSessionPopup.classList.toggle('hidden');
+			    	addSessionPopup.classList.toggle('visually-hidden');
 
 			    	this.info.seances = data.result.seances;
 			    	

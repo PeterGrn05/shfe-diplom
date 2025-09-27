@@ -41,7 +41,7 @@ async function renderSeanceLayout () {
 			
 			seatGrid.appendChild(seat);
 			seat.classList.add('hall-seat');
-			if (place === 'standart') {
+			if (place === 'standard') {
 				seat.classList.add('seat-free');
 			} else if (place === 'vip') {
 				seat.classList.add('seat-vip');
@@ -54,7 +54,7 @@ async function renderSeanceLayout () {
 					selectedSeats.push({
 						row: rowIndex + 1,
 						place: placeIndex + 1,
-						cost: currentHall.hall_price_standart,
+						cost: currentHall.hall_price_standard,
 					});
 				} else if (seat.classList.contains('seat-vip') && !seat.classList.contains('hall-seat-chosen')) {
 					seat.classList.add('hall-seat-chosen');
@@ -78,7 +78,7 @@ async function renderSeanceLayout () {
 		});
 	});
 
-	legendStandard.textContent = `Свободно (${currentHall.hall_price_standart}руб)`;
+	legendStandard.textContent = `Свободно (${currentHall.hall_price_standard}руб)`;
 	legendVip.textContent = `Свободно VIP (${currentHall.hall_price_vip}руб)`;
 
 	btnBooking.addEventListener('click', e => {

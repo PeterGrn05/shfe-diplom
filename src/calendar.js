@@ -27,8 +27,6 @@ function renderCalendar(date) {
 	const dayItems = [...calendarList.children];
 	let tempDate = new Date(date);
 	let activeIndex = 0;
-
-	// обновляем список фильмов
 	drawFilms();
 
 	dayItems.forEach((el, idx) => {
