@@ -1242,7 +1242,7 @@ label {
 	appearance: none;
 	-webkit-appearance: none;
 
-	background-image: url(/img/select.png);
+	background-image: url(/img/select.svg);
 	background-repeat: no-repeat;
 	background-size: 12px 7px;
 	background-position: center right 12px;
