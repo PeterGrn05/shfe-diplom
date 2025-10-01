@@ -40,7 +40,7 @@
 				</header>
 				<div class="manage-content">
 					<p class="admin-text">Выберите зал для конфигурации:</p>
-					<div class="hall-switch-buttons hall-switch-buttons-configuration"></div>
+					<div class="switch-hall-buttons switch-hall-buttons-configuration"></div>
 					<p class="admin-text">Укажите количество рядов и максимальное количество кресел в ряду:</p>
 					<div class="input-container">
 						<div class="input-wrapper">
@@ -87,7 +87,7 @@
 				</header>
 				<div class="manage-content">
 					<p class="admin-text">Выберите зал для конфигурации:</p>
-					<div class="hall-switch-buttons hall-switch-buttons-prices"></div>
+					<div class="switch-hall-buttons switch-hall-buttons-prices"></div>
 					<p class="admin-text">Установите цены для типов кресел:</p>
 
 					<div class="input-container">
@@ -140,7 +140,7 @@
 				<div class="manage-content">
 					<div class="select-sales">
 						<p class="admin-text">Выберите зал для открытия/закрытия продаж:</p>
-						<div class="hall-switch-buttons hall-switch-buttons-launch"></div>
+						<div class="switch-hall-buttons switch-hall-buttons-launch"></div>
 					</div>
 					<p class="sales-text">Всё готово к открытию</p>
 					<div class="admin-buttons">
@@ -167,7 +167,7 @@
 					name="filmDescription"></textarea>
 				<label for="movie-country" class="popup-label">Страна</label>
 				<input type="text" class="popup-input" id="movie-country" name="filmOrigin">
-				<div class="submit-wrapper-popup submit__wrapper">
+				<div class="submit-wrapper-popup">
 					<button class="button admin-button " id="create-film">Добавить фильм</button>
 					<label for="upload-poster" class="button admin-button">
 						Загрузить постер
@@ -194,7 +194,7 @@
 				<label for="time-select" class="popup-label">Время начала</label>
 				<input name="seanceTime" type="time" class="popup-input popup-input-time" id="time-select" value="10:00"
 					min="10:00" max="23:59" required>
-				<div class="submit-wrapper-popup submit__wrapper">
+				<div class="submit-wrapper-popup">
 					<button class="button admin-button" id="create-session">Добавить фильм</button>
 					<button class="button admin-white-button">Отменить</button>
 				</div>
@@ -211,7 +211,7 @@
 			<form class="popup-hall-form popup-form" id="popup-hall-form">
 				<label for="hall-name" class="popup-label">Название зала</label>
 				<input type="text" class="popup-input" id="hall-name" placeholder="Например, «Зал 1»">
-				<div class="submit-wrapper-popup submit__wrapper">
+				<div class="submit-wrapper-popup submit-wrapper-popup">
 					<button class="button admin-button" id="create-hall">Добавить зал</button>
 					<button class="button admin-white-button" id="cancel-hall">Отменить</button>
 				</div>
@@ -221,10 +221,10 @@
 	<script defer src="src/xhr.js"></script>
 	<script defer src="src/admin/admin.js"></script>
 	<script defer src="src/admin/hall.js"></script>
-	<script defer src="src/admin/config.js"></script>
-	<script defer src="src/admin/sessions.js"></script>
+	<script defer src="src/admin/config.js"></script>	
 	<script defer src="src/admin/movie.js"></script>
 	<script defer src="src/admin/price.js"></script>
+	<script defer src="src/admin/sessions.js"></script>
 	<script defer src="src/admin/launch.js"></script>
 </body>
 

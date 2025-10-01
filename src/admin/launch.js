@@ -7,15 +7,15 @@ launchButton.addEventListener('click', e => {
 	openHall(launchActiveHall);
 });
 
-function openHall (hall) {
-	const params = new FormData()
+function openHall () {
+	const params = new FormData();
 	if (isHallOpen === 0) {
-		params.set('hallOpen', '1')
+		params.set('hallOpen', '1');
 	} else {
-		params.set('hallOpen', '0')
+		params.set('hallOpen', '0');
 	}
 	
-	data.openHall(launchActiveHall, params)
+	data.openHall(launchActiveHall, params);
 }
 
 function launchInfo (hallId) {
@@ -24,6 +24,6 @@ function launchInfo (hallId) {
 	if (isHallOpen === 0) {
 		launchButton.textContent = 'Открыть продажу билетов';
 	} else {
-		launchButton.textContent = 'Приостановить продажу билетов'
-	}
+		launchButton.textContent = 'Приостановить продажу билетов';
+	};
 }

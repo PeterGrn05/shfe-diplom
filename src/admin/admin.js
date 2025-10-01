@@ -12,9 +12,9 @@ async function getData() {
 	filmItems = data.info.films;
 	seanceItems = data.info.seances;
 	renderHallsList(data.info.halls);
-	renderHallSwitch (document.querySelector('.hall-switch-buttons-configuration'), hallItems);
-	renderHallSwitch (document.querySelector('.hall-switch-buttons-launch'), hallItems);
-	renderHallSwitch (document.querySelector('.hall-switch-buttons-prices'), hallItems);
+	renderHallSwitch (document.querySelector('.switch-hall-buttons-configuration'), hallItems);
+	renderHallSwitch (document.querySelector('.switch-hall-buttons-launch'), hallItems);
+	renderHallSwitch (document.querySelector('.switch-hall-buttons-prices'), hallItems);
 	renderFilmsList(filmItems);
 	renderSessionsList(hallItems, seanceItems);
 }
@@ -22,10 +22,10 @@ async function getData() {
 getData();
 
 const closePopup = [...document.querySelectorAll('.popup-close')];
-const cancelPopup = [...document.querySelectorAll('.popup-cancel')]
+const cancelPopup = [...document.querySelectorAll('.popup-cancel')];
 
 closePopup.forEach((element) => {
-	element.addEventListener('click', (e) => {
+	element.addEventListener('click', () => {
 		element.closest('.popup-wrapper').classList.toggle('visually-hidden');
 	})
 });

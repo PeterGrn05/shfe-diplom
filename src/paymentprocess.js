@@ -18,7 +18,7 @@ let placeArray = [];
 
 function renderPayment() {
 	chosenSeats.forEach(element => {
-		totalPrice += element.coast;
+		totalPrice += element.cost;
 		placeArray.push(`Ряд ${element.row} Место ${element.place}`);
 	});
 

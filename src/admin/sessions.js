@@ -1,4 +1,3 @@
-const addMovieButton = document.querySelector('.admin-sessions .admin-button'); 
 const addSessionPopup = document.getElementById('add-session');
 const addSessionForm = document.getElementById('popup-session-form');
 const submitSessionButton = document.getElementById('create-session');
