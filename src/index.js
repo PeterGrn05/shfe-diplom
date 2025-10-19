@@ -6,12 +6,6 @@ loginButton.addEventListener('click', (e) => {
 	window.location.assign('loginform.html', '_self')
 })
 
-const returntoIndex = document.querySelector('header')
-returntoIndex.addEventListener('click', (e) => {
-	e.preventDefault();
-
-	window.location.assign('index.html', '_self')
-})
 
 let storage = new allData();
 
