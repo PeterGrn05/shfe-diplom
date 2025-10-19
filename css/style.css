@@ -96,6 +96,10 @@ label {
 	justify-content: space-between;
 }
 
+.header:hover {
+	cursor: pointer
+}
+
 .header-logo {
 	margin: 0;
 	font-size: 34px;
@@ -525,6 +529,11 @@ label {
 	height: 3px;
 
 	background-image: url(../img/topticketseam.png);
+}
+
+
+.ticket-info-text-value {
+	font-weight: 500;
 }
 
 
@@ -1043,7 +1052,7 @@ label {
 
 .admin-delete-button-sessions {
 	position: absolute;
-	background-image: url(/img/remove.png);
+	background-image: url(../img/remove.png);
 	background-size: contain;
 	bottom: 1px;
 	right: 1px;
@@ -1103,7 +1112,7 @@ label {
 .admin-sessions-session-delete {
 	height: 20px;
 	width: 20px;
-	background-image: url(/img/remove.png);
+	background-image: url(../img/remove.png);
 	background-size: contain;
 	position: absolute;
 
@@ -1242,7 +1251,7 @@ label {
 	appearance: none;
 	-webkit-appearance: none;
 
-	background-image: url(/img/select.svg);
+	background-image: url(../img/select.svg);
 	background-repeat: no-repeat;
 	background-size: 12px 7px;
 	background-position: center right 12px;

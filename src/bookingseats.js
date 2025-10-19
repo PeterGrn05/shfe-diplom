@@ -13,6 +13,13 @@ const seanceTime = window.localStorage.getItem('seanceTime');
 const filmTitle = window.localStorage.getItem('filmTitle');
 const chosenDate = window.localStorage.getItem('chosenDate');
 
+const returntoIndex = document.querySelector('header')
+returntoIndex.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	window.location.assign('index.html', '_self')
+})
+
 async function renderSeanceLayout () {
 	await appData.getData();
 	await appData.getSeanceConfig(seanceId);

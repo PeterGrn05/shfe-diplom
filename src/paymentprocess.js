@@ -16,6 +16,13 @@ const chosenDate = window.localStorage.getItem('chosenDate');
 let totalPrice = 0;
 let placeArray = [];
 
+const returntoIndex = document.querySelector('header')
+returntoIndex.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	window.location.assign('index.html', '_self')
+})
+
 function renderPayment() {
 	chosenSeats.forEach(element => {
 		totalPrice += element.cost;
