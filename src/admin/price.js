@@ -7,7 +7,7 @@ let hallPrices = [];
 let pricesActiveHall;
 
 function getHallPrices (hall) {
-	pricesActiveHall = hallItems.find(x => x.id === hall);
+	pricesActiveHall = data.info.halls.find(x => x.id === hall);
 	hallPrices = [pricesActiveHall.hall_price_standart, pricesActiveHall.hall_price_vip];
 	renderHallPrices();
 	priceInput();

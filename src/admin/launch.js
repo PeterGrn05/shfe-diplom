@@ -19,7 +19,7 @@ function openHall () {
 }
 
 function launchInfo (hallId) {
-	launchActiveHall = hallItems.find(x => x.id === hallId);
+	launchActiveHall = data.info.halls.find(x => x.id === hallId);
 	isHallOpen = launchActiveHall.hall_open;
 	if (isHallOpen === 0) {
 		launchButton.textContent = 'Открыть продажу билетов';

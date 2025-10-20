@@ -7,7 +7,7 @@ let hallConfig = [];
 let configActiveHall;
 
 function getHallSeats (hall) {
-	configActiveHall = hallItems.find(x => x.id === hall);
+	configActiveHall = data.info.halls.find(x => x.id === hall);
 	hallConfig = configActiveHall.hall_config;
 	inputRows.value = hallConfig.length;
 	inputSeats.value = hallConfig[0].length;
