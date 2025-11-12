@@ -15,41 +15,44 @@ function getHallSeats (hall) {
 	hallInput();
 }
 
+function validateNumber(input) {
+	let value = input.value.trim();
+	value = value.replace(/\D+/g, '');
+	input.value = value;
+
+	if (value === "" || Number(value) < 1) {
+		input.classList.add('input-error');
+		return false;
+	} else {
+		input.classList.remove('input-error');
+		return true;
+	}
+}
+
 function hallInput () {
-	inputRows.addEventListener('input', (e) => {
-		if (!/\D/.test(inputRows.value)) {
-			if (inputSeats.value) {
-				hallConfig = [];
-				for (let i = 0; i < inputRows.value; i++) {
-					hallConfig.push([]);
-					for (let x = 0; x < inputSeats.value; x++) {
-						hallConfig[i].push('standart');
-					}
-				}
-				setTimeout(() => {
-					renderHallSeats();
-				}, 2000)
-			}
-		}
+
+	inputRows.addEventListener('input', () => {
+		if (!validateNumber(inputRows)) return;
+		if (validateNumber(inputSeats)) rebuildConfig();
 	});
 
-	inputSeats.addEventListener('input', (e) => {
-		if (!/\D/.test(inputSeats.value)) {
-			if (inputRows.value) {
-				hallConfig = []
-				for (let i = 0; i < inputRows.value; i++) {
-					hallConfig.push([]);
-					for (let x = 0; x < inputSeats.value; x++) {
-						hallConfig[i].push('standart');
-					}
-				}
-				setTimeout(() => {
-					renderHallSeats();
-				}, 2000)
-				
-			}
-		}
+	inputSeats.addEventListener('input', () => {
+		if (!validateNumber(inputSeats)) return;
+		if (validateNumber(inputRows)) rebuildConfig();
 	});
+	inputRows.addEventListener('blur', () => validateNumber(inputRows));
+	inputSeats.addEventListener('blur', () => validateNumber(inputSeats));
+}
+
+function rebuildConfig() {
+	hallConfig = [];
+	for (let i = 0; i < Number(inputRows.value); i++) {
+		hallConfig.push([]);
+		for (let x = 0; x < Number(inputSeats.value); x++) {
+			hallConfig[i].push('standart');
+		}
+	}
+	renderHallSeats();
 }
 
 function renderHallSeats () {
@@ -67,12 +70,12 @@ function renderHallSeats () {
 			} else if (place === 'vip') {
 				hallGridCell.classList.add('seat-scheme-item-vip')
 			};
-			hallGridCell.addEventListener('click', (e) => {
-				if ([...hallGridCell.classList].includes('seat-scheme-item-regular')) {
+			hallGridCell.addEventListener('click', () => {
+				if (hallGridCell.classList.contains('seat-scheme-item-regular')) {
 					hallGridCell.classList.remove('seat-scheme-item-regular');
 					hallGridCell.classList.add('seat-scheme-item-vip');
 					hallConfig[rowIndex][placeIndex] = 'vip';
-				} else if ([...hallGridCell.classList].includes('seat-scheme-item-vip')) {
+				} else if (hallGridCell.classList.contains('seat-scheme-item-vip')) {
 					hallGridCell.classList.remove('seat-scheme-item-vip');
 					hallConfig[rowIndex][placeIndex] = 'disabled'
 				} else {
@@ -85,6 +88,15 @@ function renderHallSeats () {
 };
 
 async function saveHallSeats () {
+
+	const validRows = validateNumber(inputRows);
+	const validSeats = validateNumber(inputSeats);
+
+	if (!validRows || !validSeats) {
+		alert("Ошибка: количество рядов и мест должно быть целым числом не меньше 1.");
+		return;
+	}
+
 	const placeCount = hallConfig[0].length;
 	const rowCount = hallConfig.length;
 	const params = new FormData();
@@ -93,7 +105,6 @@ async function saveHallSeats () {
 	params.set('config', JSON.stringify(hallConfig));
 
 	data.saveConfig(params);
-
 }
 
 function cancelHallSeats () {

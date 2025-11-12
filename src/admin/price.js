@@ -18,21 +18,47 @@ function renderHallPrices() {
 	inputPriceVip.value = hallPrices[1];
 }
 
+function validatePrice(input) {
+	let value = input.value.trim();
+
+	value = value.replace(/\D+/g, '');
+	input.value = value;
+
+	if (value === "" || Number(value) < 1) {
+		input.classList.add('input-error');
+		return false;
+	} else {
+		input.classList.remove('input-error');
+		return true;
+	}
+}
+
 function priceInput () {
-	inputPriceStandard.addEventListener('input', (e) => {
-		if (!/\D/.test(inputPriceStandard.value)) {
-			hallPrices[0] = inputPriceStandard.value
+	inputPriceStandard.addEventListener('input', () => {
+		if (validatePrice(inputPriceStandard)) {
+			hallPrices[0] = inputPriceStandard.value;
 		}
 	});
 
-	inputPriceVip.addEventListener('input', (e) => {
-		if (!/\D/.test(inputPriceVip.value)) {
-			hallPrices[1] = inputPriceVip.value
+	inputPriceVip.addEventListener('input', () => {
+		if (validatePrice(inputPriceVip)) {
+			hallPrices[1] = inputPriceVip.value;
 		}
 	});
+
+	inputPriceStandard.addEventListener('blur', () => validatePrice(inputPriceStandard));
+	inputPriceVip.addEventListener('blur', () => validatePrice(inputPriceVip));
 }
 
 function saveHallPrices() {
+	const validStandard = validatePrice(inputPriceStandard);
+	const validVip = validatePrice(inputPriceVip);
+
+	if (!validStandard || !validVip) {
+		alert("Ошибка: стоимость должна быть целым числом и не меньше 1.");
+		return;
+	}
+
 	const priceStandart = hallPrices[0];
 	const priceVip = hallPrices[1];
 	const params = new FormData();
@@ -46,4 +72,4 @@ function cancelHallPrices() {
 }
 
 pricesConfirm.addEventListener('click', saveHallPrices);
-pricesCancel.addEventListener('click', cancelHallPrices)
+pricesCancel.addEventListener('click', cancelHallPrices);

@@ -43,8 +43,8 @@ label {
 	overflow: hidden;
 }
 
-.hidden {
-	display: none;
+.input-error {
+	border: 2px solid red !important;
 }
 
 /* фон */

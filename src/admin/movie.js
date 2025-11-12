@@ -11,15 +11,51 @@ const filmsList = document.querySelector('.admin-sessions-movie-list');
 
 addFilmPopupButton.addEventListener('click', () => {
 	addFilmPopup.classList.toggle('visually-hidden');
-})
+});
+
+function validateText(input) {
+	const value = input.value.trim();
+	if (value === "") {
+		input.classList.add('input-error');
+		return false;
+	} else {
+		input.classList.remove('input-error');
+		return true;
+	}
+}
+
+function validateNumber(input) {
+	let value = input.value.trim();
+	value = value.replace(/\D+/g, '');
+	input.value = value;
+
+	if (value === "" || Number(value) < 1) {
+		input.classList.add('input-error');
+		return false;
+	} else {
+		input.classList.remove('input-error');
+		return true;
+	}
+}
+
+function validateFilmForm() {
+	const validName = validateText(filmNameInput);
+	const validDesc = validateText(filmDescInput);
+	const validCountry = validateText(filmCountryInput);
+	const validLength = validateNumber(filmLengthInput);
+
+	if (!validName || !validDesc || !validCountry || !validLength) {
+		alert("Ошибка: заполните все поля, а продолжительность должна быть числом не меньше 1.");
+		return false;
+	}
+	return true;
+}
 
 submitFilmButton.addEventListener('click', (e) => {
 	e.preventDefault();
-
+	if (!validateFilmForm()) return;
 	filmsList.innerHTML = "";
-
 	const params = new FormData(addFilmForm);
-
 	data.addFilm(params);
 });
 
@@ -35,7 +71,7 @@ function renderFilmsList(filmItems) {
 				</div>
 				<button class="admin-delete-button admin-delete-button-sessions"></button>
 			</li>`
-			)
+		)
 		filmSelect.insertAdjacentHTML('beforeend', `<option value="${element.id}">${element.film_name}</option>`);
 	});
 
@@ -59,10 +95,10 @@ function renderFilmsList(filmItems) {
 
 function deleteFilm(buttonArray) {
 	buttonArray.forEach((element) => {
-			element.addEventListener('click', (e) => {
-				e.preventDefault();
-				const filmId = element.closest('.admin-sessions-movie-list-item').id.slice(4);
-				data.deleteFilm(filmId);				
-				});
+		element.addEventListener('click', (e) => {
+			e.preventDefault();
+			const filmId = element.closest('.admin-sessions-movie-list-item').id.slice(4);
+			data.deleteFilm(filmId);				
 		});
+	});
 };
