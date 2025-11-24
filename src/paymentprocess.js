@@ -25,7 +25,7 @@ returntoIndex.addEventListener('click', (e) => {
 
 function renderPayment() {
 	chosenSeats.forEach(element => {
-		totalPrice += element.cost;
+		totalPrice += element.coast;
 		placeArray.push(`Ряд ${element.row} Место ${element.place}`);
 	});
 

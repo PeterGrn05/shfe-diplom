@@ -61,14 +61,14 @@ async function renderSeanceLayout () {
 					selectedSeats.push({
 						row: rowIndex + 1,
 						place: placeIndex + 1,
-						cost: currentHall.hall_price_standart,
+						coast: currentHall.hall_price_standart,
 					});
 				} else if (seat.classList.contains('seat-vip') && !seat.classList.contains('hall-seat-chosen')) {
 					seat.classList.add('hall-seat-chosen');
 					selectedSeats.push({
 						row: rowIndex + 1,
 						place: placeIndex + 1,
-						cost: currentHall.hall_price_vip,
+						coast: currentHall.hall_price_vip,
 					});
 				} else if (seat.classList.contains('hall-seat-chosen')) {
 					seat.classList.remove('hall-seat-chosen');
